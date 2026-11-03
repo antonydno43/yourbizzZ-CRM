@@ -1,0 +1,50 @@
+{
+  "name": "yourbizz-crm",
+  "version": "1.0.0",
+  "description": "YourBizz SaaS CRM - Drag & Drop Website Builder with Booking, Forms, E-commerce and CRM",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^7.0.1",
+    "@radix-ui/react-toast": "^1.3.1",
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.118.0",
+    "@tanstack/react-query": "^5.105.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.4.0",
+    "framer-motion": "^14.9.0",
+    "lucide-react": "^1.67.0",
+    "next": "16.4.4",
+    "next-themes": "^0.3.0",
+    "react": "19.3.0",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-dom": "19.3.0",
+    "react-draggable": "^4.7.2",
+    "react-grid-layout": "^2.3.0",
+    "recharts": "^3.10.1",
+    "resend": "^6.37.0",
+    "tailwind-merge": "^2.6.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.4",
+    "prettier": "^3.9.10",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
