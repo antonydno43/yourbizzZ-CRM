@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS email_logs (
   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
   workspace_id UUID NOT NULL REFERENCES workspaces(id) ON DELETE CASCADE,
   template_id UUID REFERENCES email_templates(id) ON DELETE SET NULL,
-  to TEXT NOT NULL,
+  recipient TEXT NOT NULL,
   subject VARCHAR(255) NOT NULL,
   content TEXT,
   status VARCHAR(20) DEFAULT 'sent' CHECK (status IN ('sent', 'failed', 'bounced', 'delivered', 'opened')),

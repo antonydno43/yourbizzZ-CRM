@@ -1410,7 +1410,7 @@ export interface Database {
           id: string
           workspace_id: string
           template_id: string | null
-          to: string
+          recipient: string
           subject: string
           content: string | null
           status: 'sent' | 'failed' | 'bounced' | 'delivered' | 'opened'
@@ -1422,7 +1422,7 @@ export interface Database {
           id?: string
           workspace_id: string
           template_id?: string | null
-          to: string
+          recipient: string
           subject: string
           content?: string | null
           status?: 'sent' | 'failed' | 'bounced' | 'delivered' | 'opened'
@@ -1434,7 +1434,7 @@ export interface Database {
           id?: string
           workspace_id?: string
           template_id?: string | null
-          to?: string
+          recipient?: string
           subject?: string
           content?: string | null
           status?: 'sent' | 'failed' | 'bounced' | 'delivered' | 'opened'
