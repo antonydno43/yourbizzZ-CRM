@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS product_categories (
   slug VARCHAR(255) UNIQUE,
   image_url TEXT,
   parent_id UUID REFERENCES product_categories(id) ON DELETE SET NULL,
-  order INTEGER DEFAULT 0,
+  sort_order INTEGER DEFAULT 0,
   is_active BOOLEAN DEFAULT TRUE,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()

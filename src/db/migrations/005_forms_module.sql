@@ -70,14 +70,14 @@ CREATE TABLE IF NOT EXISTS form_fields (
   default_value TEXT,
   options JSONB DEFAULT '[]'::jsonb,
   validation JSONB DEFAULT '{}'::jsonb,
-  order INTEGER DEFAULT 0,
+  sort_order INTEGER DEFAULT 0,
   width VARCHAR(20) DEFAULT 'full' CHECK (width IN ('full', 'half', 'third', 'quarter')),
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 CREATE INDEX IF NOT EXISTS idx_form_fields_form ON form_fields(form_id);
-CREATE INDEX IF NOT EXISTS idx_form_fields_order ON form_fields(form_id, order);
+CREATE INDEX IF NOT EXISTS idx_form_fields_order ON form_fields(form_id, sort_order);
 
 -- Trigger for form_fields
 CREATE TRIGGER update_form_fields_updated_at

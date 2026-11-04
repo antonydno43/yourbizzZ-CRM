@@ -946,6 +946,58 @@ export interface Database {
         }
       }
 
+      // Form Fields
+      form_fields: {
+        Row: {
+          id: string
+          form_id: string
+          name: string
+          label: string
+          type: 'text' | 'textarea' | 'email' | 'number' | 'select' | 'multiselect' | 'checkbox' | 'radio' | 'date' | 'datetime' | 'file' | 'hidden'
+          placeholder: string | null
+          required: boolean
+          default_value: string | null
+          options: Json
+          validation: Json
+          sort_order: number
+          width: 'full' | 'half' | 'third' | 'quarter'
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          form_id: string
+          name: string
+          label: string
+          type: 'text' | 'textarea' | 'email' | 'number' | 'select' | 'multiselect' | 'checkbox' | 'radio' | 'date' | 'datetime' | 'file' | 'hidden'
+          placeholder?: string | null
+          required?: boolean
+          default_value?: string | null
+          options?: Json
+          validation?: Json
+          sort_order?: number
+          width?: 'full' | 'half' | 'third' | 'quarter'
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          form_id?: string
+          name?: string
+          label?: string
+          type?: 'text' | 'textarea' | 'email' | 'number' | 'select' | 'multiselect' | 'checkbox' | 'radio' | 'date' | 'datetime' | 'file' | 'hidden'
+          placeholder?: string | null
+          required?: boolean
+          default_value?: string | null
+          options?: Json
+          validation?: Json
+          sort_order?: number
+          width?: 'full' | 'half' | 'third' | 'quarter'
+          created_at?: string
+          updated_at?: string
+        }
+      }
+
       // E-commerce - Products
       products: {
         Row: {
@@ -1050,7 +1102,7 @@ export interface Database {
           slug: string
           image_url: string | null
           parent_id: string | null
-          order: number
+          sort_order: number
           is_active: boolean
           created_at: string
           updated_at: string
@@ -1063,7 +1115,7 @@ export interface Database {
           slug?: string
           image_url?: string | null
           parent_id?: string | null
-          order?: number
+          sort_order?: number
           is_active?: boolean
           created_at?: string
           updated_at?: string
@@ -1076,7 +1128,7 @@ export interface Database {
           slug?: string
           image_url?: string | null
           parent_id?: string | null
-          order?: number
+          sort_order?: number
           is_active?: boolean
           created_at?: string
           updated_at?: string
