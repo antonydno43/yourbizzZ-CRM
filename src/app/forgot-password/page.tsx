@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { ArrowLeft, Loader2, Mail } from 'lucide-react'
 import Link from 'next/link'
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
+import { createClientComponentClient } from '@supabase/ssr'
 import { toast } from '@/hooks/use-toast'
 import Image from 'next/image'
 

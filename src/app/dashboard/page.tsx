@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
+import { createClientComponentClient } from '@supabase/ssr'
 import { useToast } from '@/hooks/use-toast'
 import {
   LayoutDashboard,

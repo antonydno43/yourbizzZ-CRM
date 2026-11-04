@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { SessionContextProvider } from '@supabase/auth-helpers-react'
+import { SessionContextProvider } from '@supabase/ssr'
 import { createClient } from '@/lib/supabase/client'
 import { ThemeProvider } from '@/components/ui/theme-provider'
 
