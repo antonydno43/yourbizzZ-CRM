@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS pages (
   is_published BOOLEAN DEFAULT FALSE,
   is_homepage BOOLEAN DEFAULT FALSE,
   is_draft BOOLEAN DEFAULT TRUE,
-  order INTEGER DEFAULT 0,
+  sort_order INTEGER DEFAULT 0,
   parent_id UUID REFERENCES pages(id) ON DELETE SET NULL,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS pages (
 
 CREATE INDEX IF NOT EXISTS idx_pages_website ON pages(website_id);
 CREATE INDEX IF NOT EXISTS idx_pages_parent ON pages(parent_id);
-CREATE INDEX IF NOT EXISTS idx_pages_order ON pages(website_id, order);
+CREATE INDEX IF NOT EXISTS idx_pages_order ON pages(website_id, sort_order);
 
 -- Trigger for pages
 CREATE TRIGGER update_pages_updated_at
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS elements (
   styles JSONB DEFAULT '{}'::jsonb,
   position JSONB DEFAULT '{}'::jsonb,
   size JSONB DEFAULT '{}'::jsonb,
-  order INTEGER DEFAULT 0,
+  sort_order INTEGER DEFAULT 0,
   parent_id UUID REFERENCES elements(id) ON DELETE SET NULL,
   is_locked BOOLEAN DEFAULT FALSE,
   is_hidden BOOLEAN DEFAULT FALSE,
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS elements (
 
 CREATE INDEX IF NOT EXISTS idx_elements_page ON elements(page_id);
 CREATE INDEX IF NOT EXISTS idx_elements_parent ON elements(parent_id);
-CREATE INDEX IF NOT EXISTS idx_elements_order ON elements(page_id, order);
+CREATE INDEX IF NOT EXISTS idx_elements_order ON elements(page_id, sort_order);
 
 -- Trigger for elements
 CREATE TRIGGER update_elements_updated_at
