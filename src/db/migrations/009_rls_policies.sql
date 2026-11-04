@@ -1250,11 +1250,6 @@ CREATE POLICY "Public can view booking availability"
   ON booking_availability FOR SELECT
   USING (is_available = TRUE);
 
--- Public can view active products
-CREATE POLICY "Public can view active products"
-  ON products FOR SELECT
-  USING (is_active = TRUE);
-
 -- Public can view active categories
 CREATE POLICY "Public can view active categories"
   ON product_categories FOR SELECT
